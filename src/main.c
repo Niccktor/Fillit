@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/06 14:35:09 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/06 16:25:37 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(int argc, char **argv)
 {
 	if (argc != 2)
 	{
-		ft_putstr("usage : fillit input_file\n");
+		ft_putstr("usage: fillit input_file\n");
 		return (-1);
 	}
 	if (ft_read(argv[1]) == -1)
