@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/06 16:24:29 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/06 16:41:16 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,14 @@ t_tetri		*ft_new_tetri(char **tetri, char height, char width)
 	new->width = width;
 	new->tetri = tetri;
 	return (new);
+}
+
+int		ft_high_sqrt(int nb)
+{
+	int i;
+
+	i = 2;
+	while (i * i <= nb)
+		i++;
+	return (i);
 }
