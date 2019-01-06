@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/06 15:20:17 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/06 16:28:06 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,3 @@ cleanlib :
 
 fcleanlib :
 	@make -C $(LIB_FT) fclean
-
-relib :
-	@make -C $(LIB_FT) re 
-	@make re 
