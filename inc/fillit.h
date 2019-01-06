@@ -6,19 +6,19 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:03:02 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/06 15:18:31 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/06 15:21:26 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef
+# ifndef FILLIT_H
 
 # include "../lib/libft/libft.h"
 
 typedef struct	s_tetri
 {
-	char		height
-	char		width
-	char		**tetri
+	char		height;
+	char		width;
+	char		**tetri;
 }				t_tetri;
 
 int		ft_read(char *s);
