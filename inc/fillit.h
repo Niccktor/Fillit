@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/06 14:35:09 by tbeguin          ###   ########.fr       */
+/*   Created: 2019/01/06 14:03:02 by tbeguin           #+#    #+#             */
+/*   Updated: 2019/01/06 15:18:31 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fillit.h"
+# ifndef
 
-int		main(int argc, char **argv)
+# include "../lib/libft/libft.h"
+
+typedef struct	s_tetri
 {
-	if (argc != 2)
-	{
-		ft_putstr("usage : fillit input_file\n");
-		return (-1);
-	}
-	if (ft_read(argv[1]) == -1)
-	{
-		ft_putstr("error\n");
-		return (-1);
-	}
-	return (0);
-}
+	char		height
+	char		width
+	char		**tetri
+}				t_tetri;
+
+int		ft_read(char *s);
+
+void	ft_free_list(t_list *alst);
+void	ft_free_tetri(t_tetri *tetri);
+t_tetri	ft_new_tetr(char **tetri, char height, char width);
+
+#endif
