@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:14:41 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 15:39:45 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 16:02:25 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_map	*ft_new_map(char size)
 {
 	t_map	*new;
 	int		i;
+	int		j;
 
 	new = (t_map *)ft_memalloc(sizeof(t_map));
 	new->size = size;
@@ -35,7 +36,12 @@ t_map	*ft_new_map(char size)
 	while (i < size)
 	{
 		new->array[i] = ft_strnew(size * sizeof(char));
-		ft_memset((void *)new->array[i], '.',(size_t)new->size);
+		j = 0;
+		while (j < size)
+		{
+			new->array[i][j] = '.';
+			j++;
+		}
 		i++;
 	}
 	return (new);
