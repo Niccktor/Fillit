@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 15:38:52 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 16:39:59 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int		ft_high_sqrt(int nb)
 	int i;
 
 	i = 2;
-	while (i * i <= nb)
+	while (i * i < nb)
 		i++;
 	return (i);
 }
