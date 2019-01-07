@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/06 16:28:06 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/07 15:38:06 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ LIB_FT		= $(LIB_DIR)/libft
 FT_LNK		= -L $(LIB_FT) -l ft
 
 SRC = main.c	\
-	  util.c
+	  util.c	\
+	  util_2.c
+
 OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
 all :
@@ -42,11 +44,11 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) $(FT_LNK) $(OBJ) -o $(NAME)
 	@echo "\033[32m$(NAME) Created\033[0m"
  
-clean : cleanlib 
+clean :  
 	@rm -Rf $(OBJ_DIR)
 	@echo "\033[31mRemoved obj files\033[0m"
 
-fclean : fcleanlib clean
+fclean : clean
 	@rm -f $(NAME)
 	@echo "\033[31mRemoved $(NAME)\033[0m"
 
@@ -57,3 +59,6 @@ cleanlib :
 
 fcleanlib :
 	@make -C $(LIB_FT) fclean
+
+norme :
+	norminette -R CheckForbiddenSourceHeader $(addprefix $(SRC_DIR)/,$(SRC))
