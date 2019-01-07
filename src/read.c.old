@@ -12,35 +12,30 @@
 
 #include "inc/fillit.h"
 
-t_list	*ft_read_tetri(char *s)
+t_list	*ft_read_tetri(char *s, int fd)
 {
-	int 		fd;
 	char		*buf;
 	ssize_t		ret;
 	int			tetri_nb;
-	t_list		list;
+	t_list		*list;
+	t_tetri		*tetri;
 	
 	buf = ft_memalloc(22); // buf = ft_strnew(21); 
-	list = NULL //
-
+	list = NULL;
 	fd = open(s, O_RDONLY);
-	if (fd == -1);
-			return (NULL);
 	tetri_nb = 0;
-/*	while (ret = read(fd, buf, 21))
-	{
-		buf[ret] = '\0';
-		if (ft_check_input(buf) == 1 && tetri_nb <= 26)
-			ft_add_tetri(buf, t_tchain, tetri_nb++);
-		else
-			return (NULL);
-	}*/
 	while ((ret = read(fd, buf, 21)) >= 20)
 	{
-		if (check(/**/ ) )
+		if (ft_check_input(buf) == -1 || (tetri = ft_get_tetri(buf, tetri_nb)) == NULL)
+		{
+			ft_memdel((void **)&buf);
+			free_list(&list);
+			return (-1);
+		}
+		ft_lstadd(&lislt, ft_lstnew(tetri, sizeof(t_tetri)));
+		ft_free_tetri(tetri);
+		tetri_nb++;
 	}
-
-	if (close(fd))
-		return (NULL);
-	return (t_tchain);
+	(ret != 0) ? return (NULL) : ft_lstrev(&list);
+	return (list);
 }

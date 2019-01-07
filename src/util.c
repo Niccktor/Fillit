@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 18:19:19 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 21:30:07 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ void		ft_free_list(t_list *alst)
 
 void		ft_free_tetri(t_tetri *atetri)
 {
-	char	i;
-
-	i = 0;
 	ft_free_tab_2d(atetri->tetri, atetri->height);
 	ft_memdel((void **)&(atetri));
 }
