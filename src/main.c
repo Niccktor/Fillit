@@ -6,12 +6,12 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 18:13:10 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 18:15:08 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
-/*
+
 int		main(int argc, char **argv)
 {
 	if (argc != 2)
@@ -26,29 +26,7 @@ int		main(int argc, char **argv)
 	}	
 	return (0);
 }
-*/
-/*
-int		main(void)
-{
-	t_map	*amap;
-	char	size;
-	int		i;
 
-	size = 10;
-	amap = ft_new_map(size);
-	i = 0;
-	while (i < amap->size)
-	{
-		ft_putstr("i = ");
-		ft_putnbr((int)i + 1);
-		ft_putstr(": ");
-		ft_putstr(amap->array[i]);
-		ft_putstr("\n");
-		i++;
-	}
-	return (0);
-}
-*/
 /*
 int		main(void)		//test leaks tetris
 {
