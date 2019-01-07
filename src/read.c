@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read.c.old                                         :+:      :+:    :+:   */
+/*   read.c		                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msaubin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:57:39 by msaubin           #+#    #+#             */
-/*   Updated: 2019/01/07 18:39:34 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 21:54:43 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/fillit.h"
+#include "../inc/fillit.h"
 
 t_list	*ft_read_tetri(char *s, int fd)
 {
@@ -20,7 +20,7 @@ t_list	*ft_read_tetri(char *s, int fd)
 	t_list		*list;
 	t_tetri		*tetri;
 	
-	buf = ft_memalloc(22); // buf = ft_strnew(21); 
+	buf = ft_strnew(21); 
 	list = NULL;
 	fd = open(s, O_RDONLY);
 	tetri_nb = 0;
