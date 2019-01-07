@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/07 18:25:59 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/07 22:49:00 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,11 @@ LIB_DIR	= ./lib
 LIB_FT		= $(LIB_DIR)/libft
 FT_LNK		= -L $(LIB_FT) -l ft
 
-SRC = main.c	\
-	  util.c	\
-	  util_2.c
+SRC = main.c		\
+	  util.c		\
+	  util_2.c		\
+	  read.c		\
+	  tetrimino.c
 
 OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 

@@ -6,12 +6,12 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 22:02:16 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 23:10:09 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
-/*					main fin
+					//main fin
 int		main(int argc, char **argv)
 {
 	if (argc != 2)
@@ -19,20 +19,14 @@ int		main(int argc, char **argv)
 		ft_putstr("usage: fillit input_file\n");
 		return (-1);
 	}
-	if (ft_read(argv[1]) == -1)
+	if (ft_read_tetri(argv[1], 0) == NULL)
 	{
 		ft_putstr("error\n");
 		return (-1);
 	}	
 	return (0);
 }
-*/
 
-int		main(void)
-{
-
-	return (0);
-}
 
 
 

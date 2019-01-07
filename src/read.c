@@ -6,12 +6,12 @@
 /*   By: msaubin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:57:39 by msaubin           #+#    #+#             */
-/*   Updated: 2019/01/07 22:32:10 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 23:19:47 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
-
+#include <fcntl.h>
 t_list	*ft_read_tetri(char *s, int fd)
 {
 	char		*buf;
@@ -27,17 +27,19 @@ t_list	*ft_read_tetri(char *s, int fd)
 	while ((ret = read(fd, buf, 21)) >= 20)
 	{
 		if (ft_check_input(buf, ret) == -1
-				|| (tetri = ft_get_tetri(buf, tetri_nb)) == NULL)
+				|| (tetri = ft_convert_to_tetri(buf, tetri_nb)) != NULL)
 		{
 			ft_memdel((void **)&buf);
-			free_list(&list);
-			return (-1);
+			ft_free_list(list);
+			return (NULL);
 		}
-		ft_lstadd(&lislt, ft_lstnew(tetri, sizeof(t_tetri)));
-		ft_free_tetri(tetri);
+	//	ft_lstadd(&list, ft_lstnew(tetri, sizeof(t_tetri)));
+	//	ft_free_tetri(tetri);
 		tetri_nb++;
 	}
-	(ret != 0) ? return (NULL) : ft_lstrev(&list);
+	if (ret != 0)
+		return(NULL);
+	ft_lstrev(&list);
 	return (list);
 }
 
