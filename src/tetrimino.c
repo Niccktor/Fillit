@@ -6,14 +6,13 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 20:58:26 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 21:03:39 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 22:14:54 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
 
-t_tetri		*ft_convert_to_tetri(char *str)
+t_tetri		*ft_convert_to_tetri(char *str, int tetri_nb)
 {
-
 
 }
