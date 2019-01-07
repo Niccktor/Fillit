@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:03:02 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 18:24:45 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 18:44:43 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct	s_map
 	char		size;
 }				t_map;
 
-int				ft_read(char *s);
+int				ft_read_tetri(char *s);
 void			ft_free_list(t_list *alst);
 void			ft_free_tetri(t_tetri *tetri);
 void			ft_free_tab_2d(char **tab, int height);

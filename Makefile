@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/07 18:20:31 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/07 18:25:59 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,11 +44,11 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) $(FT_LNK) $(OBJ) -o $(NAME)
 	@echo "\033[32m$(NAME) Created\033[0m"
  
-clean :  
+clean : cleanlib
 	@rm -Rf $(OBJ_DIR)
 	@echo "\033[31mRemoved obj files\033[0m"
 
-fclean : clean
+fclean : fcleanlib clean
 	@rm -f $(NAME)
 	@echo "\033[31mRemoved $(NAME)\033[0m"
 
