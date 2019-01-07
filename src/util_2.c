@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:14:41 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 18:12:10 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 18:19:45 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_print_map(t_map *amap)
 
 }
 */
+
 void	ft_free_map(t_map *amap)
 {
 	ft_free_tab_2d(amap->array, amap->size);

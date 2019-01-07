@@ -6,13 +6,13 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 18:10:56 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 18:19:19 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
 
-void	ft_free_list(t_list *alst)
+void		ft_free_list(t_list *alst)
 {
 	t_tetri *cur;
 	t_list	*next;
@@ -27,18 +27,18 @@ void	ft_free_list(t_list *alst)
 	}
 }
 
-void	ft_free_tetri(t_tetri *atetri)
+void		ft_free_tetri(t_tetri *atetri)
 {
-	char i;
+	char	i;
 
 	i = 0;
 	ft_free_tab_2d(atetri->tetri, atetri->height);
 	ft_memdel((void **)&(atetri));
 }
 
-void	ft_free_tab_2d(char **tab, int height)
+void		ft_free_tab_2d(char **tab, int height)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (i < height)
@@ -60,9 +60,9 @@ t_tetri		*ft_new_tetri(char **tetri, int height, int width)
 	return (new);
 }
 
-int		ft_high_sqrt(int nb)
+int			ft_high_sqrt(int nb)
 {
-	int i;
+	int	i;
 
 	i = 2;
 	while (i * i < nb)

@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/07 15:38:06 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/07 18:20:31 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,4 +61,4 @@ fcleanlib :
 	@make -C $(LIB_FT) fclean
 
 norme :
-	norminette -R CheckForbiddenSourceHeader $(addprefix $(SRC_DIR)/,$(SRC))
+	norminette -R CheckForbiddenSourceHeader $(addprefix $(SRC_DIR)/,$(SRC)) $(INC_DIR)/fillit.h
