@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 16:03:52 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 18:13:10 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		main(int argc, char **argv)
 	return (0);
 }
 */
-
+/*
 int		main(void)
 {
 	t_map	*amap;
@@ -48,3 +48,64 @@ int		main(void)
 	}
 	return (0);
 }
+*/
+/*
+int		main(void)		//test leaks tetris
+{
+	char		**map;
+	t_tetri		*atetri;
+
+	map = ft_new_tab_2d(2, 3);
+	atetri = ft_new_tetri(map, 2, 3);
+	ft_free_tetri(atetri);
+	
+	map = ft_new_tab_2d(2, 3);
+	atetri = ft_new_tetri(map, 2, 3);
+	ft_putstr("pas de leaks \n");
+	sleep(5);
+	ft_free_tetri(atetri);
+
+	map = ft_new_tab_2d(2, 3);
+	atetri = ft_new_tetri(map, 2, 3);
+	map = ft_new_tab_2d(2, 3);
+	atetri = ft_new_tetri(map, 2, 3);
+	ft_putstr("leaks !\n");
+	sleep(5);
+	return (0);
+}*/
+
+/*						//test leaks tab2d
+int		main(void)
+{
+	char	**tetris;
+
+	tetris = ft_new_tab_2d(2, 3);
+	ft_free_tab_2d(tetris, 2);
+	tetris = ft_new_tab_2d(2, 3);
+	ft_putstr("pas de leaks \n");
+	sleep(5);
+	ft_free_tab_2d(tetris, 2);
+	tetris = ft_new_tab_2d(2, 3);
+	tetris = ft_new_tab_2d(2, 3);
+	ft_putstr("leaks !\n");
+	sleep(5);
+}
+*/
+/* 						//	test leaks t_map
+int		main(void)
+{
+	t_map	*amap;
+
+	amap = ft_new_map(10);
+	ft_free_map(amap);
+	amap = ft_new_map(10);
+	ft_putstr("pas de leaks \n");
+	sleep(5);
+	ft_free_map(amap);
+	amap = ft_new_map(10);
+	amap = ft_new_map(10);
+	ft_putstr("leaks !\n");
+	sleep(5);
+
+	return (0);
+}*/

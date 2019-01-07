@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:14:41 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 16:02:25 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/07 18:12:10 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,21 @@ t_map	*ft_new_map(char size)
 			new->array[i][j] = '.';
 			j++;
 		}
+		i++;
+	}
+	return (new);
+}
+
+char	**ft_new_tab_2d(int height, int width)
+{
+	char	**new;
+	int		i;
+
+	new = (char **)ft_memalloc(height * sizeof(char *));
+	i = 0;
+	while (i < height)
+	{
+		new[i] = ft_strnew(width * sizeof(char));
 		i++;
 	}
 	return (new);
