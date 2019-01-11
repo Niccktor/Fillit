@@ -6,7 +6,7 @@
 /*   By: msaubin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:57:39 by msaubin           #+#    #+#             */
-/*   Updated: 2019/01/07 23:19:47 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/11 17:22:54 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ t_list	*ft_read_tetri(char *s, int fd)
 	while ((ret = read(fd, buf, 21)) >= 20)
 	{
 		if (ft_check_input(buf, ret) == -1
-				|| (tetri = ft_convert_to_tetri(buf, tetri_nb)) != NULL)
+				|| (tetri = ft_convert_to_tetri(buf, tetri_nb)) == NULL)
 		{
 			ft_memdel((void **)&buf);
 			ft_free_list(list);
 			return (NULL);
 		}
-	//	ft_lstadd(&list, ft_lstnew(tetri, sizeof(t_tetri)));
-	//	ft_free_tetri(tetri);
+		ft_lstadd(&list, ft_lstnew(tetri, sizeof(t_tetri)));
+		ft_free_tetri(tetri);
 		tetri_nb++;
 	}
 	if (ret != 0)

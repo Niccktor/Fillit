@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:03:02 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/07 23:25:12 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/11 16:49:10 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int				ft_check_sharp(char *s);
  *				tetrimino.c
  */
 t_tetri			*ft_convert_to_tetri(char *str, int tetri_nb);
+t_tetri			*ft_get_tetrimino(char *str, int tetri_nb, int *len_tetri);
 /*
  *				util.c
  */
