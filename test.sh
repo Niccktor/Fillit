@@ -4,11 +4,6 @@ echo "compiling"
 make 
 chmod +x fillit
 
-if [ $# -eq 0 ]; then
-	echo "Saisir 1, 2 ou 3."
-	read $1
-fi
-clear
 if [ "$1" = "1" -o "$1" = "3" ] ; then
 	echo "cat valid_0"
 	cat ./test_files/correct/valid_0
