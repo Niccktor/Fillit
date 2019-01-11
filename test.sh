@@ -4,8 +4,6 @@ echo "compiling"
 make 
 chmod +x fillit
 
-echo $1
-echo $#
 if [ $# -eq 0 ]; then
 	echo "Saisir 1, 2 ou 3."
 	read $1
