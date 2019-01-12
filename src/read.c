@@ -6,7 +6,7 @@
 /*   By: msaubin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:57:39 by msaubin           #+#    #+#             */
-/*   Updated: 2019/01/11 17:22:54 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/12 15:40:25 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ t_list	*ft_read_tetri(char *s, int fd)
 	}
 	if (ret != 0)
 		return(NULL);
+	ft_memdel((void **)&buf);
 	ft_lstrev(&list);
 	return (list);
 }
