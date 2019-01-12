@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/12 17:42:00 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/12 20:28:23 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ void	ft_free_map(t_map *amap)
 		ft_memdel((void **)&(amap->array[i]));
 		i++;
 	}
+	ft_memdel((void **)&(amap->array));
 	ft_memdel((void **)&(amap));
 }
