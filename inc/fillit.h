@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:03:02 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/12 17:21:13 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/12 19:24:26 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_tetri			*ft_get_tetrimino(char *str, int tetri_nb, int *len_tetri);
  */
 void			ft_free_list(t_list *alst);
 void			ft_free_tetri(t_tetri *tetri);
-void			ft_free_tab_2d(char **tab, int height);
+void			ft_free_map(t_map *amap);
 /*
  *				util_2.c
  */
@@ -54,5 +54,10 @@ t_map			*ft_new_map(char size);
 t_tetri			*ft_new_tetri(char **tetri, int height, int width);
 char			**ft_new_tab_2d(int height, int width);
 int				ft_high_sqrt(int nb);
-
+/*
+ *				solve
+ */
+int				ft_solve(t_list *lst);
+int				ft_solve_next(t_map *map, t_list *lst);
+int				ft_put_tetri(t_map *map, t_tetri *atetri, int i_put, int j_put);
 #endif
