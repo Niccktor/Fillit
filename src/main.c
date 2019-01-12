@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/12 15:20:49 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/12 15:23:26 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 					//main fin
 int		main(int argc, char **argv)
 {
-	t_list	*lst;
+	t_list	*alst;
 	if (argc != 2)
 	{
 		ft_putstr("usage: fillit input_file\n");
 		return (-1);
 	}
-	if ((lst = ft_read_tetri(argv[1], 0) == NULL))
+	if ((alst = ft_read_tetri(argv[1], 0)) == NULL)
 	{
 		ft_putstr("error\n");
 		return (-1);
