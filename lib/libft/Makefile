@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 20:10:01 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/07 20:09:31 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/12 17:57:53 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ SRCS =  ft_memset.c 	\
 	   ft_lstmap.c		\
 	   ft_islower.c		\
 	   ft_isupper.c		\
+	   ft_lstcount.c	\
 	   ft_lstrev.c		\
 	   get_next_line.c	
 
