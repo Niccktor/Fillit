@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/12 16:06:56 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/12 17:20:06 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,36 +43,15 @@ void		ft_free_tetri(t_tetri *atetri)
 //	ft_memdel((void **)&(atetri));				??
 }
 
-void		ft_free_tab_2d(char **tab, int height)
+void	ft_free_map(t_map *amap)
 {
-	int		i;
+	int i;
 
 	i = 0;
-	while (i < height)
+	while (i < amap->size)
 	{
-		ft_memdel((void **)&tab[i]);
+		ft_memdel((void **)&(amap->array[i]));
 		i++;
 	}
-	free(tab);
-}
-
-t_tetri		*ft_new_tetri(char **tetri, int height, int width)
-{
-	t_tetri *new;
-
-	new = (t_tetri *)ft_memalloc(sizeof(t_tetri));
-	new->height = height;
-	new->width = width;
-	new->tetri = tetri;
-	return (new);
-}
-
-int			ft_high_sqrt(int nb)
-{
-	int	i;
-
-	i = 2;
-	while (i * i < nb)
-		i++;
-	return (i);
+	ft_memdel((void **)&(amap));
 }

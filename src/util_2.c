@@ -6,23 +6,11 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:14:41 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/11 16:48:24 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/12 17:19:51 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
-/*
-void	ft_print_map(t_map *amap)
-{
-
-}
-*/
-
-void	ft_free_map(t_map *amap)
-{
-	ft_free_tab_2d(amap->array, amap->size);
-	ft_memdel((void **)&(amap));
-}
 
 t_map	*ft_new_map(char size)
 {
@@ -48,6 +36,17 @@ t_map	*ft_new_map(char size)
 	return (new);
 }
 
+t_tetri		*ft_new_tetri(char **tetri, int height, int width)
+{
+	t_tetri *new;
+
+	new = (t_tetri *)ft_memalloc(sizeof(t_tetri));
+	new->height = height;
+	new->width = width;
+	new->tetri = tetri;
+	return (new);
+}
+
 char	**ft_new_tab_2d(int height, int width)
 {
 	char	**new;
@@ -61,4 +60,14 @@ char	**ft_new_tab_2d(int height, int width)
 		i++;
 	}
 	return (new);
+}
+
+int		ft_high_sqrt(int nb)
+{
+	int i;
+
+	i = 2;
+	while (i * i < nb)
+		i++;
+	return (i);
 }
