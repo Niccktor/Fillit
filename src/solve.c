@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/12 18:33:16 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/12 20:56:35 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/13 18:27:59 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,20 @@ int		ft_del_tetri(t_map *map, t_tetri *atetri, int i_put, int j_put)
 {
 	int	i;
 	int	j;
+	char car;
 
-	i = 0;
 	if (atetri->height + i_put > map->size || atetri->width + j_put > map->size)
 		return (-1);
+	i = 0;
+	car = '.';
 	while (i < atetri->height)
 	{
 		j = 0;
 		while (j < atetri->width)
 		{
-			if (atetri->tetri[i + i_put][j + j_put] == '.')
+			if (atetri->tetri[i][j] != '.')
+				car = atetri->tetri[i][j];
+			if (map->array[i + i_put][j + j_put] == car && car != '.')
 				map->array[i + i_put][j + j_put] = '.';
 			j++;
 		}
@@ -90,7 +94,11 @@ int		ft_put_tetri(t_map *map, t_tetri *atetri, int i_put, int j_put)
 		j = 0;
 		while (j < atetri->width)
 		{
-			if (atetri->tetri[i][j] != '.')
+			if (atetri->tetri[i][j] != '.' && \
+					map->array[i + i_put][j + j_put] == '.')
+				map->array[i + i_put][j + j_put] = atetri->tetri[i][j];
+			else if (atetri->tetri[i][j] != '.')
+				return (-1);
 			j++;
 		}
 		i++;
