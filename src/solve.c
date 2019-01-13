@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/12 18:33:16 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/13 18:27:59 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/13 18:59:58 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		ft_solve(t_list *lst)
 		map = ft_new_map(size);
 	}
 	ft_display_map(map);
+	ft_free_map(map);
 	return (0);
 }
 
