@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/13 20:50:31 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/14 13:26:54 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int		main(int argc, char **argv)
 		return (-1);
 	}
 	ft_solve(alst);
-	sleep(20);
+	ft_free_list(alst);
 	return (0);
 }
