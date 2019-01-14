@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 12:47:34 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/14 14:02:07 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/14 14:12:25 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int		main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1 || (alst = ft_read_tetri(fd)) == NULL)
 	{
+		close(fd);
 		ft_putstr("error\n");
 		return (-1);
 	}
+	close(fd);
 	ft_solve(alst);
 	ft_free_list(alst);
 	return (0);
