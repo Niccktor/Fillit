@@ -6,13 +6,13 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:14:41 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/12 17:19:51 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/14 14:07:16 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
 
-t_map	*ft_new_map(char size)
+t_map		*ft_new_map(char size)
 {
 	t_map	*new;
 	int		i;
@@ -47,7 +47,7 @@ t_tetri		*ft_new_tetri(char **tetri, int height, int width)
 	return (new);
 }
 
-char	**ft_new_tab_2d(int height, int width)
+char		**ft_new_tab_2d(int height, int width)
 {
 	char	**new;
 	int		i;
@@ -62,7 +62,7 @@ char	**ft_new_tab_2d(int height, int width)
 	return (new);
 }
 
-int		ft_high_sqrt(int nb)
+int			ft_high_sqrt(int nb)
 {
 	int i;
 
