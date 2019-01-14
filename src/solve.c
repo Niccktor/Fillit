@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/12 18:33:16 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/13 18:59:58 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/14 14:05:30 by tbeguin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int		ft_solve(t_list *lst)
 
 int		ft_solve_next(t_map *map, t_list *lst)
 {
-	int 	i;
-	int		j;
+	int	i;
+	int	j;
 
 	if (lst == NULL)
 		return (0);
@@ -52,13 +52,13 @@ int		ft_solve_next(t_map *map, t_list *lst)
 		i++;
 	}
 	return (-1);
-
 }
+
 int		ft_del_tetri(t_map *map, t_tetri *atetri, int i_put, int j_put)
 {
-	int	i;
-	int	j;
-	char car;
+	int		i;
+	int		j;
+	char	car;
 
 	if (atetri->height + i_put > map->size || atetri->width + j_put > map->size)
 		return (-1);
