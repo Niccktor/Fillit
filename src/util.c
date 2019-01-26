@@ -6,13 +6,11 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:36:52 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/20 14:10:30 by msaubin          ###   ########.fr       */
+/*   Updated: 2019/01/26 10:55:40 by nicktor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fillit.h"
-#include <malloc/malloc.h>
-#include <stdio.h>
 
 t_list	*ft_free_list(t_list *alst)
 {
