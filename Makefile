@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/12 18:56:55 by tbeguin          ###   ########.fr        #
+#    Updated: 2019/01/26 10:29:25 by nicktor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,11 +40,11 @@ all :
 	@make $(NAME)
 
 $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c
-	@$(CC) $(CFLAGS) -I $(LIB_FT) -I $(INC_DIR) -c $< -o $@
+	@$(CC) $(CFLAGS) -I $(LIB_FT) -I $(INC_DIR) $(FT_LNK) -c $< -o $@
 	@echo "\033[36m$(CC) $(CFLAGS) -c $< -o $@\033[0m"
 	
 $(NAME) : $(OBJ)
-	@$(CC) $(CFLAGS) $(FT_LNK) $(OBJ) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) $(FT_LNK) -o $(NAME)
 	@echo "\033[32m$(NAME) Created\033[0m"
  
 clean : cleanlib
