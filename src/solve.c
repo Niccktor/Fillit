@@ -6,7 +6,7 @@
 /*   By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/12 18:33:16 by tbeguin           #+#    #+#             */
-/*   Updated: 2019/01/14 14:05:30 by tbeguin          ###   ########.fr       */
+/*   Updated: 2019/01/26 10:17:11 by nicktor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,8 @@ int		ft_put_tetri(t_map *map, t_tetri *atetri, int i_put, int j_put)
 {
 	int	i;
 	int	j;
-	int boul;
-
+	
 	i = 0;
-	boul = 0;
 	if (atetri->height + i_put > map->size || atetri->width + j_put > map->size)
 		return (-1);
 	while (i < atetri->height)
