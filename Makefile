@@ -6,7 +6,7 @@
 #    By: tbeguin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 12:23:45 by tbeguin           #+#    #+#              #
-#    Updated: 2019/01/26 10:29:25 by nicktor          ###   ########.fr        #
+#    Updated: 2019/02/04 20:32:52 by tbeguin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ all :
 	@make $(NAME)
 
 $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c
-	@$(CC) $(CFLAGS) -I $(LIB_FT) -I $(INC_DIR) $(FT_LNK) -c $< -o $@
+	@$(CC) $(CFLAGS) -I $(LIB_FT) -I $(INC_DIR)  -c $< -o $@
 	@echo "\033[36m$(CC) $(CFLAGS) -c $< -o $@\033[0m"
 	
 $(NAME) : $(OBJ)
